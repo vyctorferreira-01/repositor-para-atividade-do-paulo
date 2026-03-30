@@ -1,1 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FinanceEmpresa — Crédito Empresarial Premium</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- GRAIN OVERLAY -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">FE</span>
+        <span class="logo-text">Finance<em>Empresa</em></span>
+      </a>
+      <nav class="nav-center">
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#calculadora">Simulador</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="#calculadora" class="btn btn-gold nav-cta">
+        <span>Simular Agora</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+      <li><a href="#solucoes" class="mobile-link">Soluções</a></li>
+      <li><a href="#calculadora" class="mobile-link">Simulador</a></li>
+      <li><a href="#contato" class="mobile-link">Contato</a></li>
+    </ul>
+    <a href="#calculadora" class="btn btn-gold mobile-link">Simular Agora</a>
+  </div>
+
+  <!-- ================================ HERO ================================ -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-grid-lines" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="hero-label">
+          <span class="label-dot"></span>
+          <span>Financiamento Empresarial</span>
+        </div>
+        <h1 class="hero-title">
+          Crédito que<br/>
+          <em>impulsiona</em><br/>
+          seu negócio
+        </h1>
+        <p class="hero-sub">Soluções financeiras personalizadas para capital de giro, expansão, aquisição de equipamentos e muito mais — com taxas competitivas e aprovação expressa.</p>
+        <div class="hero-actions">
+          <a href="#calculadora" class="btn btn-gold">
+            <span>Simular Financiamento</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#solucoes" class="btn btn-ghost">Ver Soluções</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong class="stat-num" data-count="500" data-prefix="R$" data-suffix="M+">0</strong>
+            <span>Crédito liberado</span>
+          </div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat-item">
+            <strong class="stat-num" data-count="12000" data-suffix="+">0</strong>
+            <span>Empresas atendidas</span>
+          </div>
+          <div class="stat-div" aria-hidden="true"></div>
+          <div class="stat-item">
+            <strong class="stat-num" data-count="98" data-suffix="%">0</strong>
+            <span>Taxa de aprovação</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-wrap">
+          <!-- Main card -->
+          <div class="hcard hcard-main">
+            <div class="hcard-header">
+              <div class="hcard-dot green"></div>
+              <span>Financiamento aprovado</span>
+            </div>
+            <div class="hcard-amount">R$ 250.000</div>
+            <div class="hcard-meta">
+              <div class="hcard-meta-item">
+                <span>Parcelas</span>
+                <strong>48x</strong>
+              </div>
+              <div class="hcard-meta-item">
+                <span>Taxa/mês</span>
+                <strong>1,29%</strong>
+              </div>
+              <div class="hcard-meta-item">
+                <span>Prazo</span>
+                <strong>4 anos</strong>
+              </div>
+            </div>
+            <div class="hcard-bar-wrap">
+              <div class="hcard-bar-label">
+                <span>Limite utilizado</span>
+                <span>72%</span>
+              </div>
+              <div class="hcard-bar"><div class="hcard-bar-fill" style="width:0%" data-width="72%"></div></div>
+            </div>
+          </div>
+
+          <!-- Floating chip top-right -->
+          <div class="hcard hcard-chip chip-tr">
+            <div class="chip-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <span class="chip-label">Novo crédito</span>
+              <strong class="chip-value green-text">+ R$ 80k</strong>
+            </div>
+          </div>
+
+          <!-- Floating chip bottom-left -->
+          <div class="hcard hcard-chip chip-bl">
+            <div class="chip-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <span class="chip-label">Aprovação</span>
+              <strong class="chip-value">24 horas</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Rolar</span>
+    </div>
+  </section>
+
+  <!-- ================================ SOBRE ================================ -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-dot"></span>Por que a FinanceEmpresa
+      </div>
+      <div class="sobre-inner">
+        <div class="sobre-heading reveal">
+          <h2>Crédito inteligente,<br/><em>sem complicação</em></h2>
+        </div>
+        <div class="sobre-text reveal">
+          <p>Somos especialistas em crédito empresarial. Nosso processo 100% digital elimina a burocracia e coloca o capital que você precisa nas suas mãos em tempo recorde.</p>
+        </div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal" style="--delay:.1s">
+          <div class="feature-num">01</div>
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Aprovação em 24h</h3>
+          <p>Análise automatizada e resposta em até 24 horas úteis. Sem espera, sem incerteza.</p>
+        </div>
+        <div class="feature-card reveal" style="--delay:.2s">
+          <div class="feature-num">02</div>
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Zero burocracia</h3>
+          <p>Processo 100% digital com documentação simplificada. Tudo resolvido pelo celular.</p>
+        </div>
+        <div class="feature-card reveal" style="--delay:.3s">
+          <div class="feature-num">03</div>
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Taxas competitivas</h3>
+          <p>Nossas taxas são adaptadas ao perfil da sua empresa, sempre abaixo do mercado.</p>
+        </div>
+        <div class="feature-card reveal" style="--delay:.4s">
+          <div class="feature-num">04</div>
+          <div class="feature-icon-wrap">
+            <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Suporte dedicado</h3>
+          <p>Consultores experientes disponíveis em cada etapa para orientar a melhor decisão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ SOLUÇÕES ================================ -->
+  <section class="solucoes" id="solucoes">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-dot"></span>Nossas Soluções
+      </div>
+      <h2 class="section-title reveal">Crédito para cada<br/><em>etapa do seu negócio</em></h2>
+
+      <div class="sol-grid">
+        <div class="sol-card reveal" style="--delay:.1s">
+          <div class="sol-num">01</div>
+          <div class="sol-icon">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" stroke="currentColor" stroke-width="1.4"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Capital de Giro</h3>
+          <p>Mantenha o fluxo de caixa saudável e garanta a operação contínua do seu negócio.</p>
+          <div class="sol-specs">
+            <div class="sol-spec"><span>Limite</span><strong>R$ 500.000</strong></div>
+            <div class="sol-spec"><span>Prazo</span><strong>36 meses</strong></div>
+            <div class="sol-spec"><span>Taxa</span><strong>1,19% a.m.</strong></div>
+          </div>
+          <a href="#calculadora" class="sol-link">
+            Simular <svg width="12" height="12" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+        <div class="sol-card sol-featured reveal" style="--delay:.2s">
+          <div class="sol-badge">Mais popular</div>
+          <div class="sol-num">02</div>
+          <div class="sol-icon">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor" stroke-width="1.4"/><path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.4"/></svg>
+          </div>
+          <h3>Expansão de Negócio</h3>
+          <p>Financie a abertura de novas unidades, reformas, ampliações ou aquisições estratégicas.</p>
+          <div class="sol-specs">
+            <div class="sol-spec"><span>Limite</span><strong>R$ 2.000.000</strong></div>
+            <div class="sol-spec"><span>Prazo</span><strong>60 meses</strong></div>
+            <div class="sol-spec"><span>Taxa</span><strong>1,29% a.m.</strong></div>
+          </div>
+          <a href="#calculadora" class="sol-link featured-link">
+            Simular <svg width="12" height="12" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+        <div class="sol-card reveal" style="--delay:.3s">
+          <div class="sol-num">03</div>
+          <div class="sol-icon">
+            <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2m-3.22-6.78-1.42 1.42M6.64 17.36l-1.42 1.42m0-12.78 1.42 1.42m10.72 10.72 1.42 1.42" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Equipamentos</h3>
+          <p>Adquira máquinas, tecnologia e equipamentos com condições especiais de financiamento.</p>
+          <div class="sol-specs">
+            <div class="sol-spec"><span>Limite</span><strong>R$ 1.000.000</strong></div>
+            <div class="sol-spec"><span>Prazo</span><strong>48 meses</strong></div>
+            <div class="sol-spec"><span>Taxa</span><strong>1,09% a.m.</strong></div>
+          </div>
+          <a href="#calculadora" class="sol-link">
+            Simular <svg width="12" height="12" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ CALCULADORA ================================ -->
+  <section class="calculadora" id="calculadora">
+    <div class="calc-bg-accent" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label light reveal">
+        <span class="label-dot gold"></span>Simulador Interativo
+      </div>
+      <h2 class="section-title light reveal">Calcule seu<br/><em>financiamento agora</em></h2>
+
+      <div class="calc-panel">
+        <div class="calc-form">
+          <div class="calc-form-title">Parâmetros da simulação</div>
+
+          <div class="form-field">
+            <label for="valorFinanciamento">Valor do Financiamento</label>
+            <div class="field-prefix">
+              <span class="prefix-text">R$</span>
+              <input type="text" id="valorFinanciamento" placeholder="100.000,00" autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="taxaJuros">Taxa de Juros Mensal</label>
+            <div class="field-suffix">
+              <input type="number" id="taxaJuros" placeholder="1,29" step="0.01" min="0.1" max="10"/>
+              <span class="suffix-text">% a.m.</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="numeroParcelas">Número de Parcelas</label>
+            <div class="select-wrap">
+              <select id="numeroParcelas">
+                <option value="12">12 meses — 1 ano</option>
+                <option value="24">24 meses — 2 anos</option>
+                <option value="36" selected>36 meses — 3 anos</option>
+                <option value="48">48 meses — 4 anos</option>
+                <option value="60">60 meses — 5 anos</option>
+              </select>
+              <svg class="select-arrow" width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Modalidade</label>
+            <div class="toggle-group">
+              <label class="toggle-btn active" id="btnPrice">
+                <input type="radio" name="tipo" value="price" checked/>
+                <span>Tabela Price</span>
+              </label>
+              <label class="toggle-btn" id="btnSac">
+                <input type="radio" name="tipo" value="sac"/>
+                <span>SAC</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-gold btn-calc" id="calcularBtn">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-4M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M9 7h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Calcular Simulação</span>
+          </button>
+        </div>
+
+        <div class="calc-result" id="calcResult">
+          <div class="result-empty">
+            <div class="empty-ring">
+              <svg width="48" height="48" fill="none" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" stroke="currentColor" stroke-width="1.2" opacity=".3"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg>
+            </div>
+            <p>Preencha os parâmetros e clique em <strong>Calcular</strong> para ver a simulação completa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ DEPOIMENTOS ================================ -->
+  <section class="depoimentos">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-dot"></span>Depoimentos
+      </div>
+      <h2 class="section-title reveal">O que nossos<br/><em>clientes dizem</em></h2>
+
+      <div class="depo-grid">
+        <div class="depo-card reveal" style="--delay:.1s">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p>O processo foi extremamente rápido. Em menos de 24h tínhamos o crédito aprovado para expandir nossa rede de lojas.</p>
+          <div class="depo-author">
+            <div class="depo-avatar">MR</div>
+            <div>
+              <strong>Marcos Rodrigues</strong>
+              <span>Varejo — São Paulo, SP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card depo-featured reveal" style="--delay:.2s">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p>Taxas muito abaixo do mercado e atendimento impecável. Consegui financiar toda a renovação tecnológica da minha fábrica.</p>
+          <div class="depo-author">
+            <div class="depo-avatar">CA</div>
+            <div>
+              <strong>Carla Almeida</strong>
+              <span>Indústria — Belo Horizonte, MG</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card reveal" style="--delay:.3s">
+          <div class="depo-quote">"</div>
+          <div class="depo-stars">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p>O simulador online foi decisivo para o planejamento. A clareza dos números facilitou muito a tomada de decisão.</p>
+          <div class="depo-author">
+            <div class="depo-avatar">FS</div>
+            <div>
+              <strong>Felipe Santos</strong>
+              <span>Serviços — Rio de Janeiro, RJ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================ CONTATO ================================ -->
+  <section class="contato" id="contato">
+    <div class="container contato-inner">
+      <div class="contato-info reveal">
+        <div class="section-label">
+          <span class="label-dot"></span>Fale Conosco
+        </div>
+        <h2>Vamos construir<br/><em>algo grande juntos</em></h2>
+        <p>Nossa equipe de consultores está pronta para encontrar a melhor solução de crédito para a sua empresa.</p>
+        <div class="contact-list">
+          <a href="tel:+551130000000" class="contact-line">
+            <div class="contact-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.89 11 19.79 19.79 0 01.82 2.38 2 2 0 012.81.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l.91-.94a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <span>(11) 3000-0000</span>
+              <small>Seg–Sex, 8h–18h</small>
+            </div>
+          </a>
+          <a href="mailto:contato@financeempresa.com.br" class="contact-line">
+            <div class="contact-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <span>contato@financeempresa.com.br</span>
+              <small>Resposta em até 2h</small>
+            </div>
+          </a>
+          <div class="contact-line">
+            <div class="contact-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <span>Av. Paulista, 1000 — 10º andar</span>
+              <small>São Paulo — SP</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contato-form reveal" id="contatoForm" style="--delay:.15s">
+        <div class="form-row">
+          <div class="form-field light-field">
+            <label>Nome completo</label>
+            <input type="text" id="nome" placeholder="Seu nome" required/>
+          </div>
+          <div class="form-field light-field">
+            <label>E-mail corporativo</label>
+            <input type="email" id="email" placeholder="seu@empresa.com" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field light-field">
+            <label>Telefone</label>
+            <input type="tel" id="telefone" placeholder="(11) 99999-9999"/>
+          </div>
+          <div class="form-field light-field">
+            <label>CNPJ da empresa</label>
+            <input type="text" id="cnpj" placeholder="00.000.000/0001-00"/>
+          </div>
+        </div>
+        <div class="form-field light-field">
+          <label>Sua necessidade</label>
+          <textarea id="mensagem" rows="4" placeholder="Descreva sua necessidade de crédito..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark btn-full">
+          <span>Enviar Mensagem</span>
+          <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div id="formMsg" class="form-feedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================================ FOOTER ================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark">FE</span>
+          <span class="logo-text">Finance<em>Empresa</em></span>
+        </a>
+        <p>Crédito inteligente para empresas que querem crescer com segurança e estratégia.</p>
+        <div class="footer-tagline">Desde 2010 — São Paulo, Brasil</div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#calculadora">Simulador</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#">Capital de Giro</a></li>
+          <li><a href="#">Expansão</a></li>
+          <li><a href="#">Equipamentos</a></li>
+          <li><a href="#">Refinanciamento</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">LGPD</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 FinanceEmpresa. Todos os direitos reservados.</p>
+      <p>CNPJ 00.000.000/0001-00 — Instituição financeira regulamentada pelo Banco Central do Brasil</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
