@@ -1,1 +1,313 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FinanceEmpresa - Soluções em Financiamento</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">Finance<span>Empresa</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#calculadora">Simulador</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <a href="#calculadora" class="btn btn-primary nav-cta">Simular Agora</a>
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">Financiamento Empresarial</span>
+        <h1>Crédito inteligente para sua <span>empresa crescer</span></h1>
+        <p>Soluções financeiras personalizadas para capital de giro, expansão, equipamentos e muito mais. Taxas competitivas e aprovação rápida.</p>
+        <div class="hero-btns">
+          <a href="#calculadora" class="btn btn-primary">Simular Financiamento</a>
+          <a href="#solucoes" class="btn btn-outline">Ver Soluções</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><strong>R$ 500M+</strong><span>Crédito liberado</span></div>
+          <div class="stat"><strong>12.000+</strong><span>Empresas atendidas</span></div>
+          <div class="stat"><strong>98%</strong><span>Aprovação</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-finance">
+          <p class="card-label">Financiamento aprovado</p>
+          <h2 class="card-value">R$ 250.000</h2>
+          <div class="card-info">
+            <div><span>Parcelas</span><strong>48x</strong></div>
+            <div><span>Taxa mensal</span><strong>1,29%</strong></div>
+            <div><span>Prazo</span><strong>4 anos</strong></div>
+          </div>
+          <div class="card-progress">
+            <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
+            <small>72% do limite utilizado</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="section-header">
+        <h2>Por que escolher a <span>FinanceEmpresa</span>?</h2>
+        <p>Somos especialistas em crédito empresarial, com processos 100% digitais e suporte dedicado.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#9889;</div>
+          <h3>Aprovação em 24h</h3>
+          <p>Análise rápida e resposta em até 24 horas úteis para liberação do crédito.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128275;</div>
+          <h3>Sem burocracia</h3>
+          <p>Processo 100% digital, sem papelada excessiva e com documentação simplificada.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128200;</div>
+          <h3>Taxas competitivas</h3>
+          <p>As melhores taxas do mercado, adaptadas ao perfil e porte da sua empresa.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#129309;</div>
+          <h3>Suporte dedicado</h3>
+          <p>Consultores especializados disponíveis para orientar em cada etapa do processo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUÇÕES -->
+  <section class="solucoes" id="solucoes">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nossas <span>Soluções</span></h2>
+        <p>Crédito para cada necessidade do seu negócio</p>
+      </div>
+      <div class="cards-grid">
+        <div class="solution-card">
+          <div class="sol-icon">&#128176;</div>
+          <h3>Capital de Giro</h3>
+          <p>Mantenha o fluxo de caixa saudável e garanta a operação do dia a dia.</p>
+          <ul>
+            <li>Até R$ 500.000</li>
+            <li>Prazo até 36 meses</li>
+            <li>Taxa a partir de 1,19% a.m.</li>
+          </ul>
+          <a href="#calculadora" class="btn btn-outline btn-sm">Simular</a>
+        </div>
+        <div class="solution-card highlight">
+          <div class="sol-badge">Mais popular</div>
+          <div class="sol-icon">&#127968;</div>
+          <h3>Expansão de Negócio</h3>
+          <p>Financie a abertura de novas unidades, reformas ou ampliações.</p>
+          <ul>
+            <li>Até R$ 2.000.000</li>
+            <li>Prazo até 60 meses</li>
+            <li>Taxa a partir de 1,29% a.m.</li>
+          </ul>
+          <a href="#calculadora" class="btn btn-primary btn-sm">Simular</a>
+        </div>
+        <div class="solution-card">
+          <div class="sol-icon">&#9881;</div>
+          <h3>Compra de Equipamentos</h3>
+          <p>Adquira máquinas e equipamentos com condições especiais de financiamento.</p>
+          <ul>
+            <li>Até R$ 1.000.000</li>
+            <li>Prazo até 48 meses</li>
+            <li>Taxa a partir de 1,09% a.m.</li>
+          </ul>
+          <a href="#calculadora" class="btn btn-outline btn-sm">Simular</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA -->
+  <section class="calculadora" id="calculadora">
+    <div class="container">
+      <div class="section-header light">
+        <h2>Simulador de <span>Financiamento</span></h2>
+        <p>Calcule as parcelas do seu financiamento em segundos</p>
+      </div>
+      <div class="calc-wrapper">
+        <div class="calc-form">
+          <div class="form-group">
+            <label for="valorFinanciamento">Valor do Financiamento</label>
+            <div class="input-prefix">
+              <span>R$</span>
+              <input type="text" id="valorFinanciamento" placeholder="100.000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="taxaJuros">Taxa de Juros Mensal (%)</label>
+            <input type="number" id="taxaJuros" placeholder="1.29" step="0.01" min="0.1" max="10" />
+          </div>
+          <div class="form-group">
+            <label for="numeroParcelas">Número de Parcelas</label>
+            <select id="numeroParcelas">
+              <option value="12">12 meses (1 ano)</option>
+              <option value="24">24 meses (2 anos)</option>
+              <option value="36" selected>36 meses (3 anos)</option>
+              <option value="48">48 meses (4 anos)</option>
+              <option value="60">60 meses (5 anos)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tipoFinanciamento">Tipo de Financiamento</label>
+            <select id="tipoFinanciamento">
+              <option value="price">Tabela Price (parcelas fixas)</option>
+              <option value="sac">SAC (parcelas decrescentes)</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-full" id="calcularBtn">Calcular Financiamento</button>
+        </div>
+        <div class="calc-result" id="calcResult">
+          <div class="result-placeholder">
+            <div class="placeholder-icon">&#128202;</div>
+            <p>Preencha os dados ao lado e clique em <strong>Calcular</strong> para ver a simulação.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <h2>O que nossos <span>clientes dizem</span></h2>
+      </div>
+      <div class="depo-grid">
+        <div class="depo-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"O processo foi extremamente rápido. Em menos de 24h tinhamos o crédito aprovado para expandir nossa loja."</p>
+          <div class="depo-author">
+            <div class="avatar">MR</div>
+            <div><strong>Marcos Rodrigues</strong><span>Varejo - SP</span></div>
+          </div>
+        </div>
+        <div class="depo-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Taxas muito abaixo do mercado e atendimento excelente. Consegui financiar os equipamentos da minha fábrica."</p>
+          <div class="depo-author">
+            <div class="avatar">CA</div>
+            <div><strong>Carla Almeida</strong><span>Indústria - MG</span></div>
+          </div>
+        </div>
+        <div class="depo-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"O simulador online ajudou a planejar o investimento com clareza. Recomendo para qualquer empresário."</p>
+          <div class="depo-author">
+            <div class="avatar">FS</div>
+            <div><strong>Felipe Santos</strong><span>Serviços - RJ</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container contato-inner">
+      <div class="contato-info">
+        <h2>Fale com um <span>consultor</span></h2>
+        <p>Nossa equipe está pronta para encontrar a melhor solução de crédito para a sua empresa.</p>
+        <div class="contato-items">
+          <div class="contato-item"><span>&#128222;</span> (11) 3000-0000</div>
+          <div class="contato-item"><span>&#128140;</span> contato@financeempresa.com.br</div>
+          <div class="contato-item"><span>&#128205;</span> Av. Paulista, 1000 - São Paulo, SP</div>
+          <div class="contato-item"><span>&#128336;</span> Seg–Sex: 8h–18h</div>
+        </div>
+      </div>
+      <form class="contato-form" id="contatoForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nome completo</label>
+            <input type="text" id="nome" placeholder="Seu nome" required />
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" id="telefone" placeholder="(11) 99999-9999" />
+          </div>
+          <div class="form-group">
+            <label>CNPJ da empresa</label>
+            <input type="text" id="cnpj" placeholder="00.000.000/0001-00" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Mensagem</label>
+          <textarea id="mensagem" rows="4" placeholder="Descreva sua necessidade de crédito..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+        <div id="formMsg" class="form-feedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Finance<span>Empresa</span></div>
+        <p>Crédito inteligente para empresas que querem crescer com segurança.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#calculadora">Simulador</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="#">Capital de Giro</a></li>
+          <li><a href="#">Expansão</a></li>
+          <li><a href="#">Equipamentos</a></li>
+          <li><a href="#">Refinanciamento</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">LGPD</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 FinanceEmpresa. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
